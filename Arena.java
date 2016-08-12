@@ -12,7 +12,7 @@ public class Arena {
 		boolean inputValid = false;
 		Validation valid = new Validation(null);
 		boolean userQuit = false;
-		int i = 0; //counter variable controlling oppPatty's behavior
+		int i = 0; // counter variable controlling oppPatty's behavior
 
 		System.out.println("Welcome to Rock, Paper, Scissors, Lizard, Spock.");
 		System.out.println("Please enter your name:");
@@ -44,8 +44,8 @@ public class Arena {
 				if (!(userInput.equalsIgnoreCase("quit"))) {
 					inputValid = valid.checkThrow(userInput.toLowerCase());
 				} else {
-					// Quits out of the game loop if the user enters command
-					// 'quit'
+					// Quits out of the game loop and ends the game if the user
+					// enters command 'quit'
 					userQuit = true;
 					System.out.println("You have quit the game.  Thank you for playing!");
 					break;
@@ -58,6 +58,8 @@ public class Arena {
 
 			currentUser.setUserThrow(userInput);
 
+			// Compares user throw to opponent throw based on the opponent
+			// selected
 			switch (userOpp.toLowerCase()) {
 			case "champ":
 				OppChamp champ = new OppChamp(userInput);
@@ -108,6 +110,8 @@ public class Arena {
 		userScanner.close();
 	}
 
+	// Contains all of the game logic to determine if the user or computer play
+	// wins
 	public static void whoWins(Roshambo userThrow, Roshambo oppThrow, String userOpp) {
 		switch (userThrow) {
 		case lizard:

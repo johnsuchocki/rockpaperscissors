@@ -16,7 +16,7 @@ public class Validation {
 	protected void setUserInput(String userInput) {
 		this.userInput = userInput;
 	}
-	
+
 	protected boolean checkOpponent(String userInput) {
 		switch (userInput.toLowerCase()) {
 		case "champ":
@@ -36,7 +36,7 @@ public class Validation {
 			return false;
 		}
 	}
-	
+
 	protected boolean checkThrow(String userInput) {
 		switch (userInput.toLowerCase()) {
 		case "rock":
@@ -51,6 +51,5 @@ public class Validation {
 			return false;
 		}
 	}
-	
-	
+
 }
